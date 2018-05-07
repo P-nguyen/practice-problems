@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Peter N.">
+        <title> random number or array element</title>
+        <script>
+            function random_range(userInput1, userInput2) {
+                //if arr then do this.
+                var randomNum;
+
+                if (typeof userInput1 == 'object'){
+                    randomNum = Math.floor( Math.random()*(userInput1.length-1));
+                    return userInput1[randomNum];
+                }else{
+                    var newArr = [];
+                    if(userInput2 < userInput1){ // makes sure the input is correctly ordered.
+                        var holdUserInput = userInput1;
+                        userInput1 = userInput2;
+                        userInput2 = holdUserInput;
+                    }
+                    for (var i = userInput1; i < userInput2; i++){
+                        newArr.push(i)
+                    }
+                    randomNum = Math.floor( Math.random()*(newArr.length-1))
+                    return newArr[randomNum];
+                }
+            }
+
+            console.log(random_range(2,15));
+            console.log(random_range(1,100));
+            console.log(random_range(['a','b','c','d','e']));
+            console.log(random_range(50,-30));
+
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
