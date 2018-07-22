@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="UTF-8">
+        <title>one to multi</title>
+        <script>
+            var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+            function groupArray( randomArray ){
+                let newgroupArray = [[],[],[]];
+                
+                for (let i = 0; i < randomArray.length; i++){
+                    
+                    let type = typeof randomArray[i];
+                    switch(type){
+                        case "string":
+                        newgroupArray[0].push(randomArray[i]);
+                        break;
+                        case "number":
+                        newgroupArray[1].push(randomArray[i]);
+                        break;
+                        case "boolean":
+                        newgroupArray[2].push(randomArray[i]);
+                        break;
+                    }
+
+                }
+                return newgroupArray;
+            }
+
+            console.log('new grouped array', groupArray(myArray));
+
+        
+        </script>
+    </head>
+    <body>
+
+
+    </body>
+
+</htm>
