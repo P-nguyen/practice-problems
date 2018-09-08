@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Peter N.">
+        <title>find the vowels</title>
+        <script>
+            function findVowels(UserInputString) {
+                var vowels = '';
+                for (var i = 0; i < UserInputString.length; i++){
+                    var letter = UserInputString[i];
+                    if (letter == 'a'||letter == 'e'||letter == 'i'||letter == 'o'||letter == 'u'||
+                        letter == 'A'||letter == 'E'||letter == 'I'||letter == 'O'||letter == 'U'){
+                        vowels += letter;
+                    }
+                }
+                return vowels;
+            }
+
+            var stringA = "four score and seven years ago";
+            console.log(findVowels(stringA));
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Peter N.">
+        <title>find middle of string</title>
+        <script>
+            function find_middle_letters(userInputString) {
+                var stringLength = userInputString.length;
+                var midIndex = stringLength/2;
+
+                if(stringLength%2 === 0){
+                    //even
+                    return userInputString[midIndex-1] + userInputString[midIndex];
+                }else{
+                    var floorMidIndex = Math.floor(midIndex);
+                    return userInputString[floorMidIndex]
+                }
+            }
+
+            console.log(find_middle_letters('seven'));
+            console.log(find_middle_letters('dish'));
+
+        </script>
+    </head>
+    <body></body>
+</html>
