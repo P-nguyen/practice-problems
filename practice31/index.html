@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Peter N.">
+        <title> Math Combo </title>
+        <script>
+            function cocococombomath() {
+                var result = arguments[0];
+                for (var i = 1; i <= arguments.length-1; i++){
+                    var operatorKey = i%4; //we will recycle the pattern if user is a pain.
+
+                    switch(operatorKey){
+                        case 1:
+                            result *= arguments[i];
+                            break;
+                        case 2:
+                            result += arguments[i];
+                            break;
+                        case 3:
+                            result /= arguments[i];
+                            break;
+                        case 0:
+                            result -= arguments[i];
+                            break;
+                    }
+                }
+                return result
+            }
+            console.log(cocococombomath(3,2,6,3,5,2,3,4,5,6));
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
