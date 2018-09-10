@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Peter Nguyen">
+        <title>Igpay Atinlay</title>
+        <script>
+        
+        var myString = "Hello my name is Stu";
+
+        function translate( inputString ){
+            let strArray = inputString.split(' ');
+            strArray.map( string => {
+                let newString = `${string.substr(1)}${string[0]}ay`;
+                console.log(newString);
+            });
+
+            
+
+        }
+
+        console.log(translate( myString ));
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
